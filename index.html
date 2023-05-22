@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Vue slider</title>
+</head>
+<body>
+
+    <main>
+        <div id="app">
+            <!-- up button -->
+            <button id="previous_img" type="button">
+                <i class="fa-solid fa-angle-up"></i>
+            </button>
+
+            <!-- slideshow container -->
+            <section id="container">
+                <div class="item">
+                    <div class="image">
+                        <img :src="items[activeItem].image" alt="immagine">
+                    </div>
+                    <div class="info">
+                        <h4>{{items[activeItem].title}}</h4>
+                        <small>{{items[activeItem].text}}</small>
+                    </div>
+                </div>
+            </section>
+
+            <!-- down button -->
+            <button id="next_img" type="button">
+                <i class="fa-solid fa-angle-down"></i>
+            </button>
+
+            <!-- slideshow preview -->
+            <section id="side_bar">
+                <div>
+                    <!-- <img v-for="(item, index) in items.image" :src="item"
+                    :class="activeItem === index ? 'selected' : ''" alt="sideimmagine"> -->
+                </div>
+            </section>
+        </div>
+       
+
+    </main>
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="text/javascript" src="js/myscript.js"></script>
+</body>
+</html>
