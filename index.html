@@ -13,7 +13,7 @@
     <main>
         <div id="app">
             <!-- up button -->
-            <button id="previous_img" type="button">
+            <button @click="previous" type="button">
                 <i class="fa-solid fa-angle-up"></i>
             </button>
 
@@ -31,15 +31,15 @@
             </section>
 
             <!-- down button -->
-            <button id="next_img" type="button">
+            <button @click="next" type="button">
                 <i class="fa-solid fa-angle-down"></i>
             </button>
 
             <!-- slideshow preview -->
             <section id="side_bar">
                 <div>
-                    <!-- <img v-for="(item, index) in items.image" :src="item"
-                    :class="activeItem === index ? 'selected' : ''" alt="sideimmagine"> -->
+                    <img v-for="(item, index) in items" :src="item.image"
+                    :class="activeItem === index ? 'selected' : ''" alt="sideimmagine">
                 </div>
             </section>
         </div>

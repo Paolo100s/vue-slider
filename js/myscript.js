@@ -32,6 +32,20 @@ createApp({
                 }
             ]
         }
+    },
+    methods: {
+        next: function() {
+            this.activeItem++;
+            if (this.activeItem === this.items.length) {
+                this.activeItem = 0;
+            }
+        },
+        previous: function() {
+            this.activeItem--;
+            if (this.activeItem < 0) {
+                this.activeItem = this.items.length -1;
+            }
+        }
     }
 }).mount('#app');
 
