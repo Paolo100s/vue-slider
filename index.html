@@ -19,7 +19,7 @@
 
             <!-- slideshow container -->
             <section id="container">
-                <div class="item">
+                <div class="item" @mouseover="stopAutoPlay" @mouseleave="autoPlay">
                     <div class="image">
                         <img :src="items[activeItem].image" alt="immagine">
                     </div>
@@ -39,7 +39,8 @@
             <section id="side_bar">
                 <div>
                     <img v-for="(item, index) in items" :src="item.image"
-                    :class="activeItem === index ? 'selected' : ''" alt="sideimmagine">
+                    :class="activeItem === index ? 'selected' : 'opacity'" alt="sideimmagine"
+                    @click="select(index)">
                 </div>
             </section>
         </div>

@@ -13,7 +13,8 @@
 
 button {
     border-radius: 10px;
-    padding: 15px;
+    padding: 10px;
+    background-color: #777;
     border: none;
     cursor: pointer;
 }
@@ -38,7 +39,7 @@ button {
 }
 
 .opacity {
-    opacity: 50%;
+    opacity: 70%;
 }
 
 .image {
@@ -53,6 +54,7 @@ button {
 
 #side_bar div {
     width: 100px;
+    cursor: pointer;
 }
 
 #side_bar div img {
